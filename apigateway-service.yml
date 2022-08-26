@@ -16,18 +16,18 @@ spring:
           enabled: true
       routes:
         - id: CREDIT-SERVICE
-            uri: CREDIT-SERVICE
+            uri: lb://CREDIT-SERVICE
             predicates:
               - Path=/api/credit/**
         - id: MOVEMENT-SERVICE
-            uri: MOVEMENT-SERVICE
+            uri: lb://MOVEMENT-SERVICE
             predicates:
               - Path=/api/movement/**
         - id: CLIENT-SERVICE
-          uri: CLIENT-SERVICE
+          uri: lb://CLIENT-SERVICE
           predicates:
             - Path=/api/client/**
         - id: ACCOUNT-SERVICE
-            uri: ACCOUNT-SERVICE
+            uri: lb://ACCOUNT-SERVICE
             predicates:
               - Path=/api/account/**
