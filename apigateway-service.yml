@@ -14,6 +14,6 @@ spring:
           enabled: true
       routes:
         - id: CLIENT-SERVICE
-          uri: http://localhost:8085/
+          uri: CLIENT-SERVICE
           predicates:
             - Path=/api/client/**
